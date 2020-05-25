@@ -1,0 +1,41 @@
+/* variables et mixin */
+
+/* variables couleurs */
+$c_sombre : #1f0b3f;
+$c_sombre_moyen:#333;
+//$c_clair : -webkit-linear-gradient( #7028e4, #e5b2ca);
+$c_clair : #f1ffe7;
+$c_theme: #23ce6b;
+$c_theme_clair : #5fdb93;
+$c_theme_sombre : #7028e4;
+
+/* variables fontes */
+$f_titre : 'Titillium Web', sans-serif;
+$f_titre : 'Teko', sans-serif;
+$f_titre : 'Kanit', sans-serif;
+$f_titre : 'Titillium Web', sans-serif;
+$f_texte : 'Lexend Tera';
+
+/* variables taille écran (basées sur les grilles bootstrap) */
+$ecran_moyen : 768px;
+$ecran_grand : 992px;
+
+/* variables icone */
+$icone_chat: '\1F640';
+$icone_cercle:'\25cf';
+
+
+
+/* mixin */
+
+@mixin flexbox($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin couleur($couleurBackground, $couleurTexte) {
+    background-color: $couleurBackground;
+    color: $couleurTexte;
+}

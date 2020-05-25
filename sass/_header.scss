@@ -1,0 +1,63 @@
+header{
+    @include flexbox(flex,column,center,center);
+    text-align: center;
+
+    .conteneur_fenetre_message{
+        //background-image: linear-gradient(to bottom, #7028e4 50%, #e5b2ca 100%);
+        width:100vw;
+        height:100vh;
+        .intro{
+
+            p{
+                font-family: $f_titre;
+                font-size: 4em;
+                line-height: 2em;
+                color:$c_clair;
+                text-shadow: 0 0 3px $c_theme_sombre , 0 0 10px $c_theme_sombre;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .regle_jeu{
+
+            p{
+                font-family: $f_titre;
+                font-size: 2em;
+                color:$c_clair;
+                text-shadow: 0 0 3px $c_theme_sombre , 0 0 10px $c_theme_sombre;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+    }
+
+}
+
+.conteneur_motif_intro{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.motif_intro{
+    color: $c_theme_clair;
+    animation: pop .1s cubic-bezier(.92,1.54,.95,1.04) forwards;
+
+}
+
+.motif_intro:before{
+    content:'?';
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(0,0)
+    }
+    100%{
+        transform: scale(1,1)
+    }
+}
+

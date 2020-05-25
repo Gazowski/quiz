@@ -1,0 +1,12 @@
+/* style pour les fenetres de message */
+
+.conteneur_fenetre_message{
+    height:100%;
+    max-width:100%;
+    @include flexbox(flex,row,center,center);
+
+}
+
+.fenetre_score{
+    padding: 0 1em;
+}

@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* variables et mixin */
+/* variables couleurs */
+/* variables fontes */
+/* variables taille écran (basées sur les grilles bootstrap) */
+/* variables icone */
+/* mixin */
+/* line 1, ../sass/_header.scss */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* line 5, ../sass/_header.scss */
+header .conteneur_fenetre_message {
+  width: 100vw;
+  height: 100vh;
+}
+/* line 11, ../sass/_header.scss */
+header .conteneur_fenetre_message .intro p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 4em;
+  line-height: 2em;
+  color: #f1ffe7;
+  text-shadow: 0 0 3px #7028e4, 0 0 10px #7028e4;
+  position: relative;
+  z-index: 2;
+}
+/* line 24, ../sass/_header.scss */
+header .conteneur_fenetre_message .regle_jeu p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2em;
+  color: #f1ffe7;
+  text-shadow: 0 0 3px #7028e4, 0 0 10px #7028e4;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 38, ../sass/_header.scss */
+.conteneur_motif_intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* line 45, ../sass/_header.scss */
+.motif_intro {
+  color: #5fdb93;
+  animation: pop 0.1s cubic-bezier(0.92, 1.54, 0.95, 1.04) forwards;
+}
+
+/* line 51, ../sass/_header.scss */
+.motif_intro:before {
+  content: '?';
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* line 1, ../sass/_carteQuestion.scss */
+.compteur_question {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3em;
+  color: #f1ffe7;
+  z-index: 100;
+  text-shadow: 0px 8px 5px #7028e4;
+  animation: pop 0.15s cubic-bezier(0.6, 0.95, 0.9, 1.5) forwards;
+}
+
+/* line 11, ../sass/_carteQuestion.scss */
+.fenetre_score {
+  font-family: "Titillium Web", sans-serif;
+  color: #f1ffe7;
+}
+/* line 15, ../sass/_carteQuestion.scss */
+.fenetre_score div {
+  font-size: 1.5em;
+}
+/* line 18, ../sass/_carteQuestion.scss */
+.fenetre_score div span {
+  color: #5fdb93;
+}
+
+/* line 24, ../sass/_carteQuestion.scss */
+.page_question {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  transition: transform .8s ease-out;
+}
+/* line 30, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  flex: 1;
+}
+/* line 37, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .consigne {
+  text-align: center;
+  max-height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 41, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .consigne h3 {
+  display: none;
+  font-family: "Titillium Web", sans-serif;
+  color: #f1ffe7;
+  font-size: 2em;
+  padding-bottom: .5em;
+  text-shadow: 0 5px 5px #7028e4;
+}
+/* line 52, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 57, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* line 62, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_image {
+  background: #f1ffe7;
+  padding: 2em;
+  text-align: center;
+  height: 100%;
+  margin: auto;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all 1s ease-out;
+}
+/* line 79, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_image img {
+  height: 90%;
+}
+/* line 84, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_image figcaption a {
+  font-size: 0.6em;
+}
+/* line 91, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_reponses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  margin: auto;
+  padding: 1em;
+  background: #23ce6b;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all 1s ease-out;
+}
+/* line 109, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_reponses div {
+  width: 100%;
+}
+/* line 113, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_reponses .bouton_reponse {
+  margin: 1em auto;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  background: #23ce6b;
+  transition: transform 0.15s cubic-bezier(0.6, 0.95, 0.9, 1.5);
+}
+/* line 122, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_reponses .bouton_reponse:hover {
+  transform: scale(1.2);
+}
+/* line 127, ../sass/_carteQuestion.scss */
+.page_question .conteneur_question .carte_superheros .carte_flip .face_reponses .message_reponse {
+  font-size: 3em;
+  color: #f1ffe7;
+  font-family: "Titillium Web", sans-serif;
+  text-shadow: 0px 8px 5px #7028e4;
+  animation: popReponse 3s forwards;
+}
+
+/* line 141, ../sass/_carteQuestion.scss */
+.retourne_carte {
+  animation: flip .8s ease-out forwards;
+}
+
+/* line 146, ../sass/_carteQuestion.scss */
+.retourne_question {
+  animation: flip_inv .8s ease-out forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes flip_inv {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  75% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes animCaseReponse {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.4);
+  }
+}
+/************************/
+/*                      */
+/*      ECRAN MOYEN     */
+/*                      */
+/************************/
+@media screen and (min-width: 768px) {
+  /* line 200, ../sass/_carteQuestion.scss */
+  .page_question .conteneur_question .consigne h3 {
+    display: block;
+  }
+  /* line 204, ../sass/_carteQuestion.scss */
+  .page_question .conteneur_question .carte_superheros {
+    max-width: 80%;
+  }
+
+  @keyframes flip {
+    0% {
+      transform: scale(1) rotateY(0deg);
+    }
+    75% {
+      transform: scale(1.2) rotateY(-180deg);
+    }
+    100% {
+      transform: scale(1) rotateY(-180deg);
+    }
+  }
+  @keyframes flip_inv {
+    0% {
+      transform: scale(1) rotateY(-180deg);
+    }
+    75% {
+      transform: scale(1.2) rotateY(0deg);
+    }
+    100% {
+      transform: scale(1) rotateY(0deg);
+    }
+  }
+}
+/************************/
+/*                      */
+/*      ECRAN GRAND     */
+/*                      */
+/************************/
+@media screen and (min-width: 992px) {
+  /* line 246, ../sass/_carteQuestion.scss */
+  .page_question .conteneur_question {
+    flex-direction: row;
+  }
+  /* line 249, ../sass/_carteQuestion.scss */
+  .page_question .conteneur_question .consigne {
+    max-width: 50%;
+  }
+  /* line 253, ../sass/_carteQuestion.scss */
+  .page_question .conteneur_question .carte_superheros {
+    max-width: 50%;
+  }
+}
+/* style pour les fenetres de message */
+/* line 3, ../sass/_fenetre.scss */
+.conteneur_fenetre_message {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 10, ../sass/_fenetre.scss */
+.fenetre_score {
+  padding: 0 1em;
+}
+
+/* classes  */
+/* line 10, ../sass/style.scss */
+.apparait {
+  display: auto;
+}
+
+/* line 14, ../sass/style.scss */
+.disparait {
+  display: none;
+}
+
+/* line 18, ../sass/style.scss */
+.bouton {
+  display: block;
+  padding: 1em 2em;
+  margin: 2em auto;
+  font-weight: 600;
+  letter-spacing: .2em;
+  background: #f1ffe7;
+  color: #7028e4;
+  border: none;
+  border-radius: 1.5em;
+  box-shadow: 0px 8px 15px #7028e4;
+  transition: all 0.15s cubic-bezier(0.6, 0.95, 0.9, 1.5);
+}
+/* line 33, ../sass/style.scss */
+.bouton:hover {
+  transform: scale(1.2);
+}
+
+/* reset */
+/* line 39, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* style général */
+/* line 46, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 52, ../sass/style.scss */
+body {
+  font-family: "Lexend Tera", sans-serif;
+  background-image: linear-gradient(to bottom, #7028e4 50%, #e5b2ca 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+/* line 60, ../sass/style.scss */
+body main {
+  height: 90%;
+  width: 100%;
+}
+/* line 65, ../sass/style.scss */
+body footer {
+  height: 5%;
+  color: #1f0b3f;
+}
+
+/************************/
+/*                      */
+/*      ECRAN MOYEN     */
+/*                      */
+/************************/
+@media screen and (min-width: 768px) {
+  /* line 78, ../sass/style.scss */
+  main {
+    height: 80%;
+  }
+
+  /* line 81, ../sass/style.scss */
+  footer {
+    height: 10%;
+  }
+}
